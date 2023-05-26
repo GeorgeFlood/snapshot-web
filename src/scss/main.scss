@@ -1,0 +1,15 @@
+@import "base";
+
+///stories imports
+@import "stories/header";
+@import "stories/gallery";
+
+/// features imports
+@import "features/header";
+
+/// pricing imports
+@import "pricing/header";
+
+// shared imports
+@import "shared/navbar";
+@import "shared/footer";
