@@ -1,0 +1,49 @@
+@mixin headerContainerInfo($color) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $color;
+  flex-basis: 45%;
+}
+
+@mixin headerContainerTitle($color) {
+  color: $color;
+  margin: 0 10rem;
+  font-size: 4rem;
+}
+
+@mixin headerContainerPara($color) {
+  color: rgba($color, 0.6);
+  margin: 2rem 10rem;
+  font-size: 2rem;
+}
+
+@mixin headerContainerImg($url) {
+  background-image: $url;
+  flex-basis: 55%;
+  background-repeat: no-repeat;
+  background-size: cover; // Ensure the image always covers the entire div
+  background-position: center; // Center the image
+  position: relative; // Add this line
+
+  &:before {
+    content: "";
+    display: block;
+    padding-top: 80%;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    background-image: $url;
+    background-repeat: no-repeat;
+    background-size: cover; // Ensure the image always covers the entire div
+    background-position: center; // Center the image
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}

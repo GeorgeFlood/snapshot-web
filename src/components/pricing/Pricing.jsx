@@ -1,9 +1,10 @@
 import React from "react";
+import Navbar from "../shared/Navbar";
 
 const Pricing = () => {
   return (
     <div>
-      <h1>hello</h1>
+      <Navbar />
     </div>
   );
 };

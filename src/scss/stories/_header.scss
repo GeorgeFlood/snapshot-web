@@ -1,1 +1,121 @@
+.header {
+  .header__container {
+    display: flex;
+    justify-content: stretch;
+  }
 
+  .header__info {
+    @include headerContainerInfo(#000);
+
+    &--title {
+      @include headerContainerTitle(#fff);
+    }
+
+    &--para {
+      @include headerContainerPara(rgba(#fff, 0.7));
+    }
+
+    &--invite {
+      display: flex;
+      cursor: pointer;
+
+      p {
+        color: #fff;
+        font-size: 1.3rem;
+        letter-spacing: 0.3rem;
+        padding: 0 1rem;
+        cursor: pointer;
+        transition: padding 0.3s ease-in-out;
+
+        &:hover {
+          padding: 0 2rem;
+        }
+      }
+    }
+  }
+
+  &__img {
+    @include headerContainerImg(
+      url("../assets/home/desktop/create-and-share.jpg")
+    );
+  }
+}
+
+.second-container {
+  display: flex;
+  justify-content: stretch;
+  .header__info {
+    @include headerContainerInfo(#fff);
+
+    &--title {
+      @include headerContainerTitle(#000);
+    }
+
+    &--para {
+      @include headerContainerPara(rgba(0, 0, 0, 0.75));
+    }
+
+    &--invite {
+      display: flex;
+
+      p {
+        color: rgb(0, 0, 0);
+        font-size: 1.3rem;
+        letter-spacing: 0.3rem;
+        padding: 0 1rem;
+        cursor: pointer;
+        transition: padding 0.3s ease-in-out;
+
+        &:hover {
+          padding: 0 2rem;
+        }
+      }
+    }
+  }
+
+  .header__img {
+    @include headerContainerImg(
+      url("../assets/home/desktop/beautiful-stories.jpg")
+    );
+  }
+}
+
+.third-container {
+  display: flex;
+  justify-content: stretch;
+
+  .header__info {
+    @include headerContainerInfo(rgb(255, 255, 255));
+    margin: 0 5%;
+
+    &--title {
+      @include headerContainerTitle(rgb(0, 0, 0));
+    }
+
+    &--para {
+      @include headerContainerPara(rgba(0, 0, 0, 0.75));
+    }
+    &--invite {
+      display: flex;
+
+      p {
+        color: rgb(0, 0, 0);
+        font-size: 1.3rem;
+        letter-spacing: 0.3rem;
+        padding: 0 1rem;
+        cursor: pointer;
+        transition: padding 0.3s ease-in-out;
+
+        &:hover {
+          padding: 0 2rem;
+        }
+      }
+    }
+  }
+
+  .header__img {
+    @include headerContainerImg(
+      url("../assets/home/desktop/designed-for-everyone.jpg")
+    );
+  }
+}

@@ -1,0 +1,69 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 7rem;
+  background-color: #fff;
+
+  &__logo {
+  }
+
+  &__nav {
+    display: flex;
+    position: relative;
+
+    a {
+      position: relative;
+      list-style: none;
+      color: #000;
+      font-size: 1.3rem;
+      font-weight: bold;
+      letter-spacing: 0.1rem;
+      text-decoration: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 82%;
+        left: 0;
+        margin-left: 4rem;
+        height: 0.35rem;
+        width: 0;
+        background: linear-gradient(135deg, #ffc593, #bc7198, #5a77ff);
+        background-size: 300% 300%;
+        transition: all 0.5s ease;
+        animation: gradient 2s linear infinite;
+      }
+
+      &:hover::before {
+        left: 0;
+        width: 60%;
+      }
+    }
+
+    li {
+      margin-left: 4rem;
+    }
+  }
+
+  &__btn {
+    padding: 1.25rem 2.5rem;
+    position: relative;
+    background-color: black;
+    top: 0;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-weight: 400;
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(#000, 0.75);
+      top: -2px;
+    }
+    &:active {
+      top: 1px;
+    }
+  }
+}
