@@ -1,4 +1,78 @@
 .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 20rem;
+  padding: 0 10rem;
   background-color: #000;
+  color: white;
+}
+
+.logo--links {
+  display: flex;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  height: 12rem;
+
+  & img {
+    color: white;
+    fill: white;
+    height: 2rem;
+  }
+
+  & ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  & li {
+    cursor: pointer;
+  }
+}
+
+.footer--nav ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin-left: 10rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
+
+  & li {
+    margin: 1rem 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: rgba(#fff, 0.4);
+    }
+  }
+}
+
+.invite--rights {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 12rem;
+}
+
+.footer--invite {
+  display: flex;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-size: 1.3rem;
+  justify-content: space-around;
+}
+
+.copyrights {
+  font-size: 1.4rem;
+  color: rgba(#fff, 0.65);
 }
