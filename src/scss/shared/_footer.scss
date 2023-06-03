@@ -17,11 +17,12 @@
   flex-direction: column;
   justify-content: space-between;
   margin: auto;
+
   height: 12rem;
 
   & img {
     color: white;
-    fill: white;
+    fill: #fff;
     height: 2rem;
   }
 
@@ -70,6 +71,7 @@
   letter-spacing: 0.25rem;
   font-size: 1.3rem;
   justify-content: space-around;
+  cursor: pointer;
 }
 
 .copyrights {
