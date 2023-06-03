@@ -1,4 +1,4 @@
-.header {
+.features-header {
   display: flex;
   background-image: url("../../../src/assets/stories/desktop/moon-of-appalacia.jpg");
   background-size: cover;
@@ -38,6 +38,7 @@
   &--story {
     display: flex;
     justify-content: flex-start;
+    cursor: pointer;
 
     & p {
       font-size: 1.3rem;

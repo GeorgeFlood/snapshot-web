@@ -342,44 +342,45 @@ body {
     opacity: 1;
   }
 }
-.header {
+.features-header {
   display: flex;
   background-image: url("../../../src/assets/stories/desktop/moon-of-appalacia.jpg");
   background-size: cover;
   height: 65rem;
 }
-.header--text {
+.features-header--text {
   display: flex;
   flex-direction: column;
   color: white;
   margin: auto 10rem;
   width: 30%;
 }
-.header--text h4 {
+.features-header--text h4 {
   font-weight: 700;
   font-size: 1.5rem;
 }
-.header--text h1 {
+.features-header--text h1 {
   font-size: 4.4rem;
   width: 80%;
   letter-spacing: 0.32rem;
   margin: 1.5rem 0;
 }
-.header--text__credit {
+.features-header--text__credit {
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
 }
-.header--text__para {
+.features-header--text__para {
   font-size: 1.5rem;
   line-height: 2.5rem;
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 1.5rem;
 }
-.header--story {
+.features-header--story {
   display: flex;
   justify-content: flex-start;
+  cursor: pointer;
 }
-.header--story p {
+.features-header--story p {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.2rem;
