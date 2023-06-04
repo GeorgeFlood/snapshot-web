@@ -39,6 +39,28 @@ body {
     background-position: 0% 50%;
   }
 }
+@-webkit-keyframes gradient-vertical {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+@keyframes gradient-vertical {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
 .header .header__container {
   display: flex;
   justify-content: stretch;
@@ -64,10 +86,12 @@ body {
 .header .header__info--invite {
   display: flex;
   cursor: pointer;
+  justify-content: space-between;
 }
 .header .header__info--invite p {
   color: #fff;
   font-size: 1.3rem;
+  font-weight: 700;
   letter-spacing: 0.3rem;
   padding: 0 1rem;
   cursor: pointer;
@@ -75,6 +99,10 @@ body {
 }
 .header .header__info--invite p:hover {
   padding: 0 2rem;
+}
+.header .header__info--arrow path {
+  stroke: white;
+  fill: white;
 }
 .header__img {
   background-image: url("../assets/home/desktop/create-and-share.jpg");
@@ -131,6 +159,7 @@ body {
 .second-container .header__info--invite p {
   color: rgb(0, 0, 0);
   font-size: 1.3rem;
+  font-weight: 700;
   letter-spacing: 0.3rem;
   padding: 0 1rem;
   cursor: pointer;
@@ -138,6 +167,10 @@ body {
 }
 .second-container .header__info--invite p:hover {
   padding: 0 2rem;
+}
+.second-container .header__info--arrow path {
+  stroke: black;
+  fill: black;
 }
 .second-container .header__img {
   background-image: url("../assets/home/desktop/beautiful-stories.jpg");
@@ -194,6 +227,7 @@ body {
 }
 .third-container .header__info--invite p {
   color: rgb(0, 0, 0);
+  font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 0.3rem;
   padding: 0 1rem;
@@ -202,6 +236,10 @@ body {
 }
 .third-container .header__info--invite p:hover {
   padding: 0 2rem;
+}
+.third-container .header__info--arrow path {
+  stroke: black;
+  fill: black;
 }
 .third-container .header__img {
   background-image: url("../assets/home/desktop/designed-for-everyone.jpg");
@@ -228,6 +266,18 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.design-line {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  height: 40%;
+  width: 0.55rem;
+  background: linear-gradient(135deg, #ffc593, #bc7198, #5a77ff);
+  background-size: 200% 200%;
+  -webkit-animation: gradient-vertical 5s linear infinite;
+          animation: gradient-vertical 5s linear infinite;
 }
 
 .gallery {
@@ -378,7 +428,7 @@ body {
 .features-header--story {
   display: flex;
   justify-content: flex-start;
-  cursor: pointer;
+  margin-left: auto;
 }
 .features-header--story p {
   font-size: 1.3rem;

@@ -18,10 +18,12 @@
     &--invite {
       display: flex;
       cursor: pointer;
+      justify-content: space-between;
 
       p {
         color: #fff;
         font-size: 1.3rem;
+        font-weight: 700;
         letter-spacing: 0.3rem;
         padding: 0 1rem;
         cursor: pointer;
@@ -31,6 +33,10 @@
           padding: 0 2rem;
         }
       }
+    }
+    &--arrow path {
+      stroke: white;
+      fill: white;
     }
   }
 
@@ -61,6 +67,7 @@
       p {
         color: rgb(0, 0, 0);
         font-size: 1.3rem;
+        font-weight: 700;
         letter-spacing: 0.3rem;
         padding: 0 1rem;
         cursor: pointer;
@@ -70,6 +77,10 @@
           padding: 0 2rem;
         }
       }
+    }
+    &--arrow path {
+      stroke: black;
+      fill: black;
     }
   }
 
@@ -100,6 +111,7 @@
 
       p {
         color: rgb(0, 0, 0);
+        font-weight: 700;
         font-size: 1.3rem;
         letter-spacing: 0.3rem;
         padding: 0 1rem;
@@ -111,6 +123,10 @@
         }
       }
     }
+    &--arrow path {
+      stroke: black;
+      fill: black;
+    }
   }
 
   .header__img {
@@ -118,4 +134,15 @@
       url("../assets/home/desktop/designed-for-everyone.jpg")
     );
   }
+}
+
+.design-line {
+  position: absolute;
+  top: 25%;
+  left: 0;
+  height: 40%;
+  width: 0.55rem;
+  background: linear-gradient(135deg, #ffc593, #bc7198, #5a77ff);
+  background-size: 200% 200%;
+  animation: gradient-vertical 5s linear infinite;
 }

@@ -8,6 +8,7 @@ export const Header = () => {
         <div className="header__info">
           <h1 className="header__info--title">
             CREATE AND SHARE YOUR PHOTO STORIES
+            <span className="design-line"></span>
           </h1>
           <p className="header__info--para">
             Photosnap is a platform for photographers and visual storytellers.
@@ -16,7 +17,16 @@ export const Header = () => {
           </p>
           <div className="header__info--invite">
             <p>GET AN INVITE</p>
-            <img src={arrow} alt="arrow to invite"></img>
+            <svg
+              className="header__info--arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              width="43"
+              height="14"
+            >
+              <g fill="none" fill-rule="evenodd" stroke="#000">
+                <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+              </g>
+            </svg>
           </div>
         </div>
         <div className="header__img"></div>
@@ -33,7 +43,16 @@ export const Header = () => {
           </p>
           <div className="header__info--invite">
             <p>GET AN INVITE</p>
-            <img src={arrow} alt="arrow to invite"></img>
+            <svg
+              className="header__info--arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              width="43"
+              height="14"
+            >
+              <g fill="none" fill-rule="evenodd" stroke="#000">
+                <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+              </g>
+            </svg>
           </div>
         </div>
       </div>
@@ -48,7 +67,16 @@ export const Header = () => {
           </p>
           <div className="header__info--invite">
             <p>GET AN INVITE</p>
-            <img src={arrow} alt="arrow to invite"></img>
+            <svg
+              className="header__info--arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              width="43"
+              height="14"
+            >
+              <g fill="none" fill-rule="evenodd" stroke="#000">
+                <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+              </g>
+            </svg>
           </div>
         </div>
         <div className="header__img"></div>
