@@ -1,0 +1,13 @@
+.features {
+  &__container {
+    height: 50rem;
+  }
+
+  & .design-line {
+    height: 25%;
+  }
+
+  & .header__img {
+    @include headerContainerImg(url("../assets/features/desktop/hero.jpg"));
+  }
+}

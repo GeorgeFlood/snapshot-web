@@ -366,11 +366,15 @@ body {
   transition: width 0.4s;
 }
 .info-comp-list {
-  display: flex;
+  display: grid;
   align-items: center;
   text-align: center;
-  justify-content: space-around;
-  margin: 10rem 0;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10rem 5rem;
+}
+.info-comp-list > div {
+  margin: 5rem 5rem;
 }
 .info-comp-list img {
   height: 6rem;
@@ -380,7 +384,7 @@ body {
   padding: 2rem 0;
 }
 .info-comp-list p {
-  font-size: 1.6rem;
+  font-size: 1.7rem;
   margin: 0 2rem;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -411,6 +415,8 @@ body {
   background-image: url("../../../src/assets/stories/desktop/moon-of-appalacia.jpg");
   background-size: cover;
   height: 65rem;
+  position: relative;
+  transition: all ease-in-out 0.5s;
 }
 .features-header--text {
   display: flex;
@@ -441,8 +447,7 @@ body {
 }
 .features-header--story {
   display: flex;
-  justify-content: flex-start;
-  margin-left: auto;
+  cursor: pointer;
 }
 .features-header--story p {
   font-size: 1.3rem;
@@ -583,4 +588,37 @@ body {
 .copyrights {
   font-size: 1.4rem;
   color: rgba(255, 255, 255, 0.65);
+}
+
+.features__container {
+  height: 50rem;
+}
+.features .design-line {
+  height: 25%;
+}
+.features .header__img {
+  background-image: url("../assets/features/desktop/hero.jpg");
+  flex-basis: 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.features .header__img:before {
+  content: "";
+  display: block;
+  padding-top: 80%;
+}
+.features .header__img:after {
+  content: "";
+  display: block;
+  background-image: url("../assets/features/desktop/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }/*# sourceMappingURL=main.css.map */

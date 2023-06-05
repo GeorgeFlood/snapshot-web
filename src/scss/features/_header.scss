@@ -3,6 +3,8 @@
   background-image: url("../../../src/assets/stories/desktop/moon-of-appalacia.jpg");
   background-size: cover;
   height: 65rem;
+  position: relative;
+  transition: all ease-in-out 0.5s;
 
   &--text {
     display: flex;
@@ -37,8 +39,7 @@
 
   &--story {
     display: flex;
-    justify-content: flex-start;
-    margin-left: auto;
+    cursor: pointer;
 
     & p {
       font-size: 1.3rem;

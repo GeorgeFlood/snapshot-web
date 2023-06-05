@@ -99,11 +99,16 @@
 }
 
 .info-comp-list {
-  display: flex;
+  display: grid;
   align-items: center;
   text-align: center;
-  justify-content: space-around;
-  margin: 10rem 0;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 10rem 5rem;
+
+  & > div {
+    margin: 5rem 5rem;
+  }
 
   img {
     height: 6rem;
@@ -115,7 +120,7 @@
   }
 
   p {
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     margin: 0 2rem;
     color: rgba(#000, 0.5);
   }
