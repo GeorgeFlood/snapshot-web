@@ -86,7 +86,6 @@ body {
 .header .header__info--invite {
   display: flex;
   cursor: pointer;
-  justify-content: space-between;
 }
 .header .header__info--invite p {
   color: #fff;
@@ -283,6 +282,7 @@ body {
 .gallery {
   display: flex;
   flex-direction: column;
+  background-color: whitesmoke;
 }
 
 .storycard-list {
@@ -293,6 +293,7 @@ body {
 .card {
   position: relative;
   flex: 1;
+  flex-basis: 25%;
   flex-wrap: wrap;
   height: 50rem;
   top: 0;
@@ -300,6 +301,9 @@ body {
   background-position: center;
   background-size: cover;
   transition: all 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 0 4rem;
 }
 .card::before {
   content: "";
@@ -322,11 +326,8 @@ body {
   -webkit-animation: gradient 2s linear infinite, fadeIn 1s forwards;
           animation: gradient 2s linear infinite, fadeIn 1s forwards;
 }
-
-.card {
-  display: flex;
-  flex-direction: column;
-  padding: 0 4rem;
+.card:hover .card__link p::before {
+  width: 100%;
 }
 .card__info {
   display: flex;
@@ -338,6 +339,7 @@ body {
   color: white;
 }
 .card__info p {
+  font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.85);
   margin: 0.5rem 0 1rem 0;
 }
@@ -350,6 +352,18 @@ body {
 }
 .card__link p {
   font-size: 1.2rem;
+  position: relative;
+  padding-bottom: 2px;
+}
+.card__link p::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #fff;
+  transition: width 0.4s;
 }
 .info-comp-list {
   display: flex;
@@ -519,10 +533,8 @@ body {
   margin: auto;
   height: 12rem;
 }
-.socials img {
-  color: white;
-  fill: #fff;
-  height: 2rem;
+.socials--logo path {
+  fill: white;
 }
 .socials ul {
   display: flex;

@@ -17,13 +17,10 @@
   flex-direction: column;
   justify-content: space-between;
   margin: auto;
-
   height: 12rem;
 
-  & img {
-    color: white;
-    fill: #fff;
-    height: 2rem;
+  &--logo path {
+    fill: white;
   }
 
   & ul {
