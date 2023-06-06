@@ -1,4 +1,4 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import logo from "../../assets/shared/desktop/logo.svg";
 
 const Navbar = () => {
@@ -10,15 +10,21 @@ const Navbar = () => {
 
       <nav>
         <ul className="nav__nav">
-          <a href="">
-            <li>STORIES</li>
-          </a>
-          <a href="">
-            <li>FEATURES</li>
-          </a>
-          <a href="">
-            <li>PRICING</li>
-          </a>
+          <li>
+            <Link to="/" className="nav__link">
+              STORIES
+            </Link>
+          </li>
+          <li>
+            <Link to="/home" className="nav__link">
+              FEATURES
+            </Link>
+          </li>
+          <li>
+            <Link to="/pricing" className="nav__link">
+              PRICING
+            </Link>
+          </li>
         </ul>
       </nav>
 

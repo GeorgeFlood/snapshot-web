@@ -12,7 +12,8 @@
     display: flex;
     position: relative;
 
-    a {
+    a,
+    .nav__nav li .nav__link {
       position: relative;
       list-style: none;
       color: #000;
@@ -26,7 +27,6 @@
         position: absolute;
         top: 82%;
         left: 0;
-        margin-left: 4rem;
         height: 0.35rem;
         width: 0;
         background: linear-gradient(135deg, #ffc593, #bc7198, #5a77ff);
@@ -37,7 +37,7 @@
 
       &:hover::before {
         left: 0;
-        width: 60%;
+        width: 98%;
       }
     }
 
