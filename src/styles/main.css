@@ -456,6 +456,39 @@ body {
   margin-right: 2rem;
 }
 
+.pricing__container {
+  height: 50rem;
+}
+.pricing .design-line {
+  height: 25%;
+}
+.pricing .header__img {
+  background-image: url("../assets/pricing/desktop/hero.jpg");
+  flex-basis: 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.pricing .header__img:before {
+  content: "";
+  display: block;
+  padding-top: 80%;
+}
+.pricing .header__img:after {
+  content: "";
+  display: block;
+  background-image: url("../assets/pricing/desktop/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .nav {
   display: flex;
   justify-content: space-around;
@@ -515,6 +548,23 @@ body {
 }
 .nav__btn:active {
   top: 1px;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25rem;
+  background-image: url(../assets//shared/desktop/bg-beta.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 0 10rem;
+}
+.banner--beta {
+  width: 35%;
+  font-size: 2.5rem;
 }
 
 .footer {
