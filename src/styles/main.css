@@ -489,6 +489,82 @@ body {
   bottom: 0;
 }
 
+.pricing-cards {
+  display: flex;
+  text-align: center;
+  margin: 10rem 2rem;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.07);
+  margin: 5rem 7rem;
+  color: #000;
+}
+.pricing-card__plan {
+  font-size: 2.5rem;
+  margin-top: 2rem;
+}
+.pricing-card__info {
+  font-size: 1.55rem;
+  line-height: 2.2rem;
+  margin: 0rem 2rem;
+  color: rgba(0, 0, 0, 0.65);
+}
+.pricing-card__btn {
+  margin: 0rem 3rem 2rem 3rem;
+  height: 4rem;
+  outline: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.pricing-card__price {
+  font-size: 3rem;
+  font-weight: bold;
+}
+.pricing-card__basic {
+  height: 35rem;
+}
+.pricing-card__pro {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  height: 40rem;
+  border-top: solid 55px linear-gradient(135deg, #ffc593, #bc7198, #5a77ff);
+  bottom: 2rem;
+}
+.pricing-card__pro::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  background: linear-gradient(135deg, #ffc593, #bc7198, #5a77ff);
+  background-size: 300% 300%;
+  transition: all 0.5s ease;
+  -webkit-animation: gradient 3s linear infinite;
+          animation: gradient 3s linear infinite;
+}
+.pricing-card__pro::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 100%;
+  width: 100%;
+  height: 7px;
+  background: linear-gradient(135deg, #ffc593, #bc7198, #5a77ff);
+  background-size: 300% 300%;
+  transition: all 0.5s ease;
+  -webkit-animation: gradient 3s linear infinite;
+          animation: gradient 3s linear infinite;
+}
+.pricing-card__pro p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .nav {
   display: flex;
   justify-content: space-around;
