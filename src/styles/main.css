@@ -491,8 +491,10 @@ body {
 
 .pricing-cards {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
-  margin: 10rem 2rem;
+  margin: 10rem 10rem;
 }
 
 .pricing-card {
@@ -500,7 +502,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.07);
-  margin: 5rem 7rem;
+  margin: 5rem 2rem;
   color: #000;
 }
 .pricing-card__plan {
@@ -525,15 +527,19 @@ body {
   font-weight: bold;
 }
 .pricing-card__basic {
-  height: 35rem;
+  height: 40rem;
+}
+.pricing-card__basic button {
+  background-color: #000;
+  color: #fff;
 }
 .pricing-card__pro {
   position: relative;
   background-color: #000;
   color: #fff;
-  height: 40rem;
+  height: 45rem;
   border-top: solid 55px linear-gradient(135deg, #ffc593, #bc7198, #5a77ff);
-  bottom: 2rem;
+  bottom: 0.3rem;
 }
 .pricing-card__pro::after {
   content: "";
@@ -563,6 +569,10 @@ body {
 }
 .pricing-card__pro p {
   color: rgba(255, 255, 255, 0.75);
+}
+.pricing-card__pro button {
+  background-color: #fff;
+  color: #000;
 }
 
 .nav {

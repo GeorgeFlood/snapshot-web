@@ -1,17 +1,17 @@
 .pricing-cards {
   display: flex;
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
-  margin: 10rem 2rem;
+  margin: 10rem 10rem;
 }
 
 .pricing-card {
   display: flex;
-
   flex-direction: column;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.07);
-
-  margin: 5rem 7rem;
+  margin: 5rem 2rem;
   color: #000;
 
   &__plan {
@@ -40,16 +40,21 @@
   }
 
   &__basic {
-    height: 35rem;
+    height: 40rem;
+
+    & button {
+      background-color: #000;
+      color: #fff;
+    }
   }
 
   &__pro {
     position: relative;
     background-color: #000;
     color: #fff;
-    height: 40rem;
+    height: 45rem;
     border-top: solid 55px linear-gradient(135deg, #ffc593, #bc7198, #5a77ff);
-    bottom: 2rem;
+    bottom: 0.3rem;
 
     &::after {
       content: "";
@@ -79,6 +84,11 @@
 
     & p {
       color: rgba(#fff, 0.75);
+    }
+
+    & button {
+      background-color: #fff;
+      color: #000;
     }
   }
 }
