@@ -575,6 +575,39 @@ body {
   color: #000;
 }
 
+.pricing-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 15rem auto;
+}
+
+.pricing-table th,
+.pricing-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 3rem 0.8rem;
+  text-align: center;
+}
+
+.pricing-table th {
+  background-color: #bc7198;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.pricing-table td {
+  letter-spacing: 0.15rem;
+  font-weight: bold;
+  font-size: 1.35rem;
+}
+
+/* Responsive layout - makes the table easier to read on a smaller device like a smartphone */
+@media only screen and (max-width: 600px) {
+  .pricing-table,
+.pricing-table th,
+.pricing-table td {
+    display: block;
+  }
+}
 .nav {
   display: flex;
   justify-content: space-around;
