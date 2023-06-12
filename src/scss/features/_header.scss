@@ -6,6 +6,10 @@
   position: relative;
   transition: all ease-in-out 0.5s;
 
+  @include respond(tab-port) {
+    flex-direction: column;
+  }
+
   &--text {
     display: flex;
     flex-direction: column;

@@ -1,10 +1,20 @@
 @mixin headerContainerInfo($color) {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: $color;
   flex-basis: 45%;
+
+  @include respond(phone) {
+    padding: 10rem 0;
+  }
+
+  @include respond(tab-port) {
+    flex-basis: 100%;
+    padding: 15rem 0;
+  }
 }
 
 @mixin headerContainerTitle($color) {
@@ -12,12 +22,28 @@
   margin: 0 10rem;
   font-size: 4rem;
   letter-spacing: 0.32rem;
+
+  @include respond(tab-port) {
+    margin: 0 25rem;
+  }
+
+  @include respond(phone) {
+    margin: 0 5rem;
+  }
 }
 
 @mixin headerContainerPara($color) {
   color: rgba($color, 0.6);
+  text-align: left;
   margin: 2rem 10rem;
   font-size: 2rem;
+
+  @include respond(tab-port) {
+    margin: 4rem 20rem;
+  }
+  @include respond(phone) {
+    margin: 4rem 5rem;
+  }
 }
 
 @mixin headerContainerImg($url) {
@@ -87,5 +113,39 @@
   }
   &:active {
     top: 1px;
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == iphone {
+    @media (max-width: 23.4375em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
+    @media (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == tab-land {
+    @media (max-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint == med-desk {
+    @media (min-width: 74.375em) and (max-width: 85.9375em) {
+      @content;
+    }
+  }
+  @if $breakpoint == big-desk {
+    @media (min-width: 112.5em) {
+      @content;
+    }
   }
 }

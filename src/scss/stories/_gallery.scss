@@ -24,6 +24,14 @@
   flex-direction: column;
   padding: 0 4rem;
 
+  @include respond(tab-port) {
+    flex-basis: 50%;
+  }
+
+  @include respond(phone) {
+    flex-basis: 100%;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -105,6 +113,10 @@
   justify-content: space-between;
   grid-template-columns: repeat(3, 1fr);
   margin: 10rem 5rem;
+
+  @include respond(phone) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   & > div {
     margin: 5rem 5rem;
