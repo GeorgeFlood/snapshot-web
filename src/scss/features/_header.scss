@@ -6,8 +6,11 @@
   position: relative;
   transition: all ease-in-out 0.5s;
 
-  @include respond(tab-port) {
-    flex-direction: column;
+  @include respond(phone) {
+    background-image: url("../../../src/assets/stories/mobile/moon-of-appalacia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 39.5rem;
   }
 
   &--text {
@@ -17,9 +20,20 @@
     margin: auto 10rem;
     width: 30%;
 
+    @include respond(tab-port) {
+      width: 40%;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+
     & h4 {
       font-weight: 700;
       font-size: 1.5rem;
+      @include respond(phone) {
+        display: none;
+      }
     }
 
     & h1 {
@@ -27,6 +41,9 @@
       width: 80%;
       letter-spacing: 0.32rem;
       margin: 1.5rem 0;
+      @include respond(phone) {
+        display: none;
+      }
     }
 
     &__credit {
@@ -50,6 +67,34 @@
       font-weight: 700;
       letter-spacing: 0.2rem;
       margin-right: 2rem;
+    }
+  }
+}
+
+.mobile-features {
+  display: none;
+  @include respond(phone) {
+    display: block;
+    padding: 5rem 2rem;
+    background-color: black;
+    color: white;
+    height: 100%;
+    z-index: 100;
+
+    & h4 {
+      font-size: 1.7rem;
+      letter-spacing: 0.4rem;
+    }
+
+    & h1 {
+      font-size: 3.3rem;
+      letter-spacing: 0.4rem;
+      margin: 1.5rem 0;
+    }
+
+    & p {
+      font-size: 1.8rem;
+      line-height: 3.2rem;
     }
   }
 }

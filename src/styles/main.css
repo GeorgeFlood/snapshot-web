@@ -578,9 +578,12 @@ body {
   position: relative;
   transition: all ease-in-out 0.5s;
 }
-@media (max-width: 56.25em) {
+@media (max-width: 37.5em) {
   .features-header {
-    flex-direction: column;
+    background-image: url("../../../src/assets/stories/mobile/moon-of-appalacia.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 39.5rem;
   }
 }
 .features-header--text {
@@ -590,15 +593,35 @@ body {
   margin: auto 10rem;
   width: 30%;
 }
+@media (max-width: 56.25em) {
+  .features-header--text {
+    width: 40%;
+  }
+}
+@media (max-width: 37.5em) {
+  .features-header--text {
+    display: none;
+  }
+}
 .features-header--text h4 {
   font-weight: 700;
   font-size: 1.5rem;
+}
+@media (max-width: 37.5em) {
+  .features-header--text h4 {
+    display: none;
+  }
 }
 .features-header--text h1 {
   font-size: 4.4rem;
   width: 80%;
   letter-spacing: 0.32rem;
   margin: 1.5rem 0;
+}
+@media (max-width: 37.5em) {
+  .features-header--text h1 {
+    display: none;
+  }
 }
 .features-header--text__credit {
   font-size: 1.3rem;
@@ -619,6 +642,33 @@ body {
   font-weight: 700;
   letter-spacing: 0.2rem;
   margin-right: 2rem;
+}
+
+.mobile-features {
+  display: none;
+}
+@media (max-width: 37.5em) {
+  .mobile-features {
+    display: block;
+    padding: 5rem 2rem;
+    background-color: black;
+    color: white;
+    height: 100%;
+    z-index: 100;
+  }
+  .mobile-features h4 {
+    font-size: 1.7rem;
+    letter-spacing: 0.4rem;
+  }
+  .mobile-features h1 {
+    font-size: 3.3rem;
+    letter-spacing: 0.4rem;
+    margin: 1.5rem 0;
+  }
+  .mobile-features p {
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+  }
 }
 
 .pricing__container {
