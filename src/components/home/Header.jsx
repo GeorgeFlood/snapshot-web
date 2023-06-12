@@ -6,7 +6,7 @@ const Header = () => {
       <div className="header__container features__container">
         <div className="header__info">
           <h1 className="header__info--title">
-            Features
+            FEATURES
             <span className="design-line"></span>
           </h1>
           <p className="header__info--para">

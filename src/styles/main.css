@@ -77,6 +77,7 @@ body {
   color: #fff;
   margin: 0 10rem;
   font-size: 4rem;
+  letter-spacing: 0.32rem;
 }
 .header .header__info--para {
   color: rgba(255, 255, 255, 0.6);
@@ -146,6 +147,7 @@ body {
   color: #000;
   margin: 0 10rem;
   font-size: 4rem;
+  letter-spacing: 0.32rem;
 }
 .second-container .header__info--para {
   color: rgba(0, 0, 0, 0.6);
@@ -156,16 +158,21 @@ body {
   display: flex;
 }
 .second-container .header__info--invite p {
-  color: rgb(0, 0, 0);
+  display: flex;
+  color: #000;
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.3rem;
   padding: 0 1rem;
   cursor: pointer;
-  transition: padding 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
-.second-container .header__info--invite p:hover {
-  padding: 0 2rem;
+.second-container .header__info--invite p img {
+  padding-left: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.second-container .header__info--invite p:hover img {
+  padding: 0 1rem;
 }
 .second-container .header__info--arrow path {
   stroke: black;
@@ -215,6 +222,7 @@ body {
   color: rgb(0, 0, 0);
   margin: 0 10rem;
   font-size: 4rem;
+  letter-spacing: 0.32rem;
 }
 .third-container .header__info--para {
   color: rgba(0, 0, 0, 0.6);
@@ -494,7 +502,7 @@ body {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  margin: 10rem 10rem;
+  margin: 10rem;
 }
 
 .pricing-card {
@@ -516,11 +524,26 @@ body {
   color: rgba(0, 0, 0, 0.65);
 }
 .pricing-card__btn {
-  margin: 0rem 3rem 2rem 3rem;
-  height: 4rem;
+  padding: 1.25rem 2.5rem;
+  position: relative;
+  background-color: #000;
+  top: 0;
   outline: none;
-  font-size: 1.5rem;
-  font-weight: bold;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  width: 80%;
+  margin: 0 auto;
+  font-weight: 800;
+}
+.pricing-card__btn:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+  top: -2px;
+}
+.pricing-card__btn:active {
+  top: 1px;
 }
 .pricing-card__price {
   font-size: 3rem;
@@ -571,8 +594,25 @@ body {
   color: rgba(255, 255, 255, 0.75);
 }
 .pricing-card__pro button {
+  padding: 1.25rem 2.5rem;
+  position: relative;
   background-color: #fff;
+  top: 0;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
   color: #000;
+  font-weight: 800;
+}
+.pricing-card__pro button:hover {
+  background-color: rgba(255, 255, 255, 0.75);
+  top: -2px;
+}
+.pricing-card__pro button:active {
+  top: 1px;
 }
 
 .pricing-table {
@@ -654,7 +694,7 @@ body {
 .nav__btn {
   padding: 1.25rem 2.5rem;
   position: relative;
-  background-color: black;
+  background-color: #000;
   top: 0;
   outline: none;
   border: none;
@@ -749,11 +789,20 @@ body {
 
 .footer--invite {
   display: flex;
-  text-transform: uppercase;
-  letter-spacing: 0.25rem;
+  color: #fff;
   font-size: 1.3rem;
-  justify-content: space-around;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  padding: 0 1rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.footer--invite img {
+  padding-left: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+.footer--invite:hover img {
+  padding: 0 1rem;
 }
 
 .copyrights {

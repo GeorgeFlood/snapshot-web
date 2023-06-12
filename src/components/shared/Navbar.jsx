@@ -5,13 +5,15 @@ const Navbar = () => {
   return (
     <div className="nav">
       <div className="nav__logo">
-        <img src={logo} alt="snapshot logo" />
+        <Link to="/">
+          <img src={logo} alt="snapshot logo" />
+        </Link>
       </div>
 
       <nav>
         <ul className="nav__nav">
           <li>
-            <Link to="/" className="nav__link">
+            <Link to="/features" className="nav__link">
               STORIES
             </Link>
           </li>

@@ -64,17 +64,7 @@
       display: flex;
 
       p {
-        color: rgb(0, 0, 0);
-        font-size: 1.3rem;
-        font-weight: 700;
-        letter-spacing: 0.3rem;
-        padding: 0 1rem;
-        cursor: pointer;
-        transition: padding 0.3s ease-in-out;
-
-        &:hover {
-          padding: 0 2rem;
-        }
+        @include invite-styles(#000);
       }
     }
     &--arrow path {

@@ -47,23 +47,6 @@
   }
 
   &__btn {
-    padding: 1.25rem 2.5rem;
-    position: relative;
-    background-color: black;
-    top: 0;
-    outline: none;
-    border: none;
-    color: #fff;
-    font-weight: 400;
-    transition: all ease-in-out 0.3s;
-    cursor: pointer;
-
-    &:hover {
-      background-color: rgba(#000, 0.75);
-      top: -2px;
-    }
-    &:active {
-      top: 1px;
-    }
+    @include btn-styles(#000);
   }
 }

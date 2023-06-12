@@ -11,6 +11,7 @@
   color: $color;
   margin: 0 10rem;
   font-size: 4rem;
+  letter-spacing: 0.32rem;
 }
 
 @mixin headerContainerPara($color) {
@@ -45,5 +46,46 @@
     left: 0;
     right: 0;
     bottom: 0;
+  }
+}
+
+@mixin invite-styles($color) {
+  display: flex;
+  color: $color;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  & img {
+    padding-left: 0.5rem;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover img {
+    padding: 0 1rem;
+  }
+}
+
+@mixin btn-styles($bg-color) {
+  padding: 1.25rem 2.5rem;
+  position: relative;
+  background-color: $bg-color;
+  top: 0;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba($bg-color, 0.75);
+    top: -2px;
+  }
+  &:active {
+    top: 1px;
   }
 }
