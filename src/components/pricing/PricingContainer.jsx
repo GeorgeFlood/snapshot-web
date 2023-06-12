@@ -23,15 +23,17 @@ const PricingContainer = () => {
     <div>
       <div className="switch">
         <label>
-          Monthly
+          <span style={{ opacity: isAnnual ? "0.2" : "1" }}>Monthly</span>
           <input
             type="checkbox"
             checked={isAnnual}
             onChange={togglePricingMode}
           />
-          <span className="slider"></span>
+          <span className="slider round"></span>
         </label>
-        Annual
+        <label>
+          <span style={{ opacity: isAnnual ? "1" : "0.2" }}>Yearly</span>
+        </label>
       </div>
 
       <div className="pricing-cards">
