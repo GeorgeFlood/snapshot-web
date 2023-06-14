@@ -91,6 +91,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #000;
+  text-align: left;
   flex-basis: 45%;
 }
 @media (max-width: 37.5em) {
@@ -194,6 +195,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  text-align: left;
   flex-basis: 45%;
 }
 @media (max-width: 37.5em) {
@@ -306,6 +308,7 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgb(255, 255, 255);
+  text-align: left;
   flex-basis: 45%;
   margin: 0 5%;
 }
@@ -696,8 +699,30 @@ body {
 .pricing__container {
   height: 50rem;
 }
+@media (max-width: 56.25em) {
+  .pricing__container {
+    padding: 0;
+    height: 90rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .pricing__container {
+    padding: 0;
+    height: 60rem;
+  }
+}
 .pricing .design-line {
   height: 25%;
+}
+@media (max-width: 56.25em) {
+  .pricing .design-line {
+    height: 2%;
+  }
+}
+@media (max-width: 37.5em) {
+  .pricing .design-line {
+    height: 2%;
+  }
 }
 .pricing .header__img {
   background-image: url("../assets/pricing/desktop/hero.jpg");
@@ -724,6 +749,74 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+}
+@media (max-width: 56.25em) {
+  .pricing .header__img {
+    background-image: url("../assets/pricing/mobile/hero.jpg");
+    flex-basis: 55%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .pricing .header__img:before {
+    content: "";
+    display: block;
+    padding-top: 80%;
+  }
+  .pricing .header__img:after {
+    content: "";
+    display: block;
+    background-image: url("../assets/pricing/mobile/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+@media (max-width: 37.5em) {
+  .pricing .header__img {
+    background-image: url("../assets/pricing/mobile/hero.jpg");
+    flex-basis: 55%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  .pricing .header__img:before {
+    content: "";
+    display: block;
+    padding-top: 80%;
+  }
+  .pricing .header__img:after {
+    content: "";
+    display: block;
+    background-image: url("../assets/pricing/mobile/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+@media (max-width: 56.25em) {
+  .pricing .header__info {
+    padding: 10rem 0;
+    height: 40rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .pricing .header__info {
+    padding: 10rem 0;
+    height: 30rem;
+  }
 }
 
 .switch {
@@ -801,6 +894,17 @@ input:checked + .slider:before {
   text-align: center;
   margin: 5rem 10rem 10rem 10rem;
 }
+@media (max-width: 56.25em) {
+  .pricing-cards {
+    margin: 5rem 0.5rem 10rem 0.5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .pricing-cards {
+    flex-direction: column;
+    margin: 4rem 2rem;
+  }
+}
 
 .pricing-card {
   display: flex;
@@ -810,15 +914,30 @@ input:checked + .slider:before {
   margin: 5rem 2rem;
   color: #000;
 }
+@media (max-width: 56.25em) {
+  .pricing-card {
+    margin: 2rem 1rem;
+  }
+}
 .pricing-card__plan {
   font-size: 2.5rem;
   margin-top: 2rem;
+}
+@media (max-width: 37.5em) {
+  .pricing-card__plan {
+    font-size: 3rem;
+  }
 }
 .pricing-card__info {
   font-size: 1.55rem;
   line-height: 2.2rem;
   margin: 0rem 2rem;
   color: rgba(0, 0, 0, 0.65);
+}
+@media (max-width: 37.5em) {
+  .pricing-card__info {
+    font-size: 2rem;
+  }
 }
 .pricing-card__btn {
   padding: 1.25rem 2.5rem;
@@ -845,6 +964,11 @@ input:checked + .slider:before {
 .pricing-card__price {
   font-size: 3rem;
   font-weight: bold;
+}
+@media (max-width: 37.5em) {
+  .pricing-card__price {
+    font-size: 3.2rem;
+  }
 }
 .pricing-card__basic {
   height: 40rem;
@@ -942,7 +1066,13 @@ input:checked + .slider:before {
   .pricing-table,
 .pricing-table th,
 .pricing-table td {
+    position: relative;
     display: block;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+  .pricing-table {
+    margin: 10rem 0;
   }
 }
 .nav {

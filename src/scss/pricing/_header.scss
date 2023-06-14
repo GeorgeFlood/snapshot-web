@@ -1,13 +1,50 @@
 .pricing {
   &__container {
     height: 50rem;
+
+    @include respond(tab-port) {
+      padding: 0;
+      height: 90rem;
+    }
+
+    @include respond(phone) {
+      padding: 0;
+      height: 60rem;
+    }
   }
 
   & .design-line {
     height: 25%;
+
+    @include respond(tab-port) {
+      height: 2%;
+    }
+
+    @include respond(phone) {
+      height: 2%;
+    }
   }
 
   & .header__img {
     @include headerContainerImg(url("../assets/pricing/desktop/hero.jpg"));
+
+    @include respond(tab-port) {
+      @include headerContainerImg(url("../assets/pricing/mobile/hero.jpg"));
+    }
+
+    @include respond(phone) {
+      @include headerContainerImg(url("../assets/pricing/mobile/hero.jpg"));
+    }
+  }
+
+  & .header__info {
+    @include respond(tab-port) {
+      padding: 10rem 0;
+      height: 40rem;
+    }
+    @include respond(phone) {
+      padding: 10rem 0;
+      height: 30rem;
+    }
   }
 }
