@@ -1,13 +1,33 @@
 .features {
   &__container {
-    height: 50rem;
+    @include respond(phone) {
+      padding: 0;
+    }
   }
 
   & .design-line {
     height: 25%;
-  }
 
+    @include respond(phone) {
+      height: 2%;
+    }
+    @include respond(tab-port) {
+      height: 2%;
+    }
+  }
   & .header__img {
     @include headerContainerImg(url("../assets/features/desktop/hero.jpg"));
+
+    @include respond(phone) {
+      @include headerContainerImg(url("../assets/features/mobile/hero.jpg"));
+      height: 50rem;
+    }
+  }
+
+  & .header__info {
+    @include respond(tab-port) {
+      padding: 10rem 0;
+      height: 30rem;
+    }
   }
 }

@@ -13,6 +13,9 @@
     height: 39.5rem;
   }
 
+  @include respond(tab-port) {
+    background-image: url("../../../src/assets/stories/tablet/moon-of-appalacia.jpg");
+  }
   &--text {
     display: flex;
     flex-direction: column;

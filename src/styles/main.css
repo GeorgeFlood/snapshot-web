@@ -450,6 +450,20 @@ body {
   flex-direction: column;
   padding: 0 4rem;
 }
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+  z-index: 1;
+}
+.card > * {
+  position: relative;
+  z-index: 2;
+}
 @media (max-width: 56.25em) {
   .card {
     flex-basis: 50%;
@@ -584,6 +598,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 39.5rem;
+  }
+}
+@media (max-width: 56.25em) {
+  .features-header {
+    background-image: url("../../../src/assets/stories/tablet/moon-of-appalacia.jpg");
   }
 }
 .features-header--text {
@@ -1095,11 +1114,23 @@ input:checked + .slider:before {
   color: rgba(255, 255, 255, 0.65);
 }
 
-.features__container {
-  height: 50rem;
+@media (max-width: 37.5em) {
+  .features__container {
+    padding: 0;
+  }
 }
 .features .design-line {
   height: 25%;
+}
+@media (max-width: 37.5em) {
+  .features .design-line {
+    height: 2%;
+  }
+}
+@media (max-width: 56.25em) {
+  .features .design-line {
+    height: 2%;
+  }
 }
 .features .header__img {
   background-image: url("../assets/features/desktop/hero.jpg");
@@ -1126,4 +1157,39 @@ input:checked + .slider:before {
   left: 0;
   right: 0;
   bottom: 0;
+}
+@media (max-width: 37.5em) {
+  .features .header__img {
+    background-image: url("../assets/features/mobile/hero.jpg");
+    flex-basis: 55%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 50rem;
+  }
+  .features .header__img:before {
+    content: "";
+    display: block;
+    padding-top: 80%;
+  }
+  .features .header__img:after {
+    content: "";
+    display: block;
+    background-image: url("../assets/features/mobile/hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+@media (max-width: 56.25em) {
+  .features .header__info {
+    padding: 10rem 0;
+    height: 30rem;
+  }
 }/*# sourceMappingURL=main.css.map */
