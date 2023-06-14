@@ -416,6 +416,9 @@ body {
     top: 0;
     transform: translateX(-50%);
     width: 40%;
+    background-size: 300% 300%;
+    -webkit-animation: gradient 5s linear infinite;
+            animation: gradient 5s linear infinite;
   }
 }
 @media (max-width: 37.5em) {
