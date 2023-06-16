@@ -701,12 +701,14 @@ body {
 }
 @media (max-width: 56.25em) {
   .pricing__container {
+    margin-top: 27rem;
     padding: 0;
     height: 90rem;
   }
 }
 @media (max-width: 37.5em) {
   .pricing__container {
+    margin-top: 11rem;
     padding: 0;
     height: 60rem;
   }
@@ -1082,14 +1084,17 @@ input:checked + .slider:before {
   height: 7rem;
   background-color: #fff;
 }
-@media (max-width: 56.25em) {
-  .nav {
-    display: none;
-  }
+.nav__logo {
+  z-index: 15;
 }
 .nav__nav {
   display: flex;
   position: relative;
+}
+@media (max-width: 56.25em) {
+  .nav__nav {
+    display: none;
+  }
 }
 .nav__nav a,
 .nav__nav .nav__nav li .nav__link {
@@ -1142,6 +1147,117 @@ input:checked + .slider:before {
 .nav__btn:active {
   top: 1px;
 }
+@media (max-width: 56.25em) {
+  .nav__btn {
+    display: none;
+  }
+}
+
+.hamburger {
+  display: none;
+}
+@media (max-width: 56.25em) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 15;
+    position: relative;
+  }
+  .hamburger span {
+    width: 2rem;
+    height: 0.25rem;
+    background: #333; /* Change this color to fit your design */
+    border-radius: 10px;
+    transition: all 0.3s linear;
+    position: relative;
+    transform-origin: 1px;
+  }
+  .hamburger .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+  .hamburger .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  .hamburger .nav__nav {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff; /* Change this color to fit your design */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.3s ease-in-out;
+  }
+  .hamburger .nav__nav--open {
+    top: 0;
+  }
+  .hamburger .nav__nav li {
+    list-style: none;
+    margin: 1rem 0;
+  }
+  .hamburger .nav__link {
+    text-decoration: none;
+    color: #333; /* Change this color to fit your design */
+  }
+}
+
+.mobile {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  color: block;
+  z-index: 10;
+  transition: transform 0.5s ease-in-out; /* You can adjust the duration and easing function to suit your needs. */
+}
+@media (max-width: 56.25em) {
+  .mobile {
+    display: block;
+  }
+}
+.mobile.active {
+  transform: translateY(0);
+}
+.mobile.inactive {
+  transform: translateY(-100%);
+}
+.mobile nav {
+  height: 100%; /* Makes sure the nav takes the full height of .mobile */
+  display: flex;
+  justify-content: center; /* Horizontally centers nav items */
+  align-items: center; /* Vertically centers nav items */
+  text-align: center; /* Centers text within nav items */
+  font-size: 3rem;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  transform: translateY(25%);
+}
+.mobile nav li {
+  padding-bottom: 2rem;
+}
+.mobile .nav__link {
+  text-decoration: none;
+  color: black;
+}
+.mobile__nav {
+  list-style: none;
+  padding: 0; /* Removes default padding from the list */
+}
 
 .banner {
   display: flex;
@@ -1155,23 +1271,60 @@ input:checked + .slider:before {
   color: white;
   padding: 0 10rem;
 }
+@media (max-width: 56.25em) {
+  .banner {
+    padding: 0 5rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .banner {
+    flex-direction: column;
+    height: 40rem;
+    background-image: url(../assets//shared/mobile/bg-beta.jpg);
+  }
+}
 .banner--beta {
   width: 35%;
   font-size: 2.5rem;
 }
+@media (max-width: 37.5em) {
+  .banner--beta {
+    width: 100%;
+    padding: 0;
+    margin: 0rem 0;
+  }
+}
+@media (max-width: 56.25em) {
+  .banner--beta {
+    width: 40%;
+    font-size: 1.7rem;
+  }
+}
 
-.footer {
-  display: flex;
+User .footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
   align-items: center;
-  justify-content: space-between;
   height: 20rem;
   padding: 0 10rem;
   background-color: #000;
   color: white;
 }
-@media (max-width: 56.25em) {
-  .footer {
-    display: none;
+@media (max-width: 900px) {
+  User .footer {
+    grid-template-columns: repeat(2, 1fr);
+    height: 20rem;
+    padding: 0 5rem;
+  }
+}
+@media (max-width: 600px) {
+  User .footer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: start;
+    height: auto;
+    padding: 2rem;
   }
 }
 
@@ -1179,15 +1332,39 @@ input:checked + .slider:before {
   display: flex;
 }
 
+.logo--links {
+  grid-column: 1/2;
+}
+
 .socials {
+  grid-column: 2/3;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: auto;
   height: 12rem;
 }
+@media (max-width: 900px) {
+  .socials {
+    height: 14rem;
+  }
+}
+@media (max-width: 600px) {
+  .socials {
+    width: 100%;
+    grid-column: 1/-1;
+  }
+}
 .socials--logo path {
   fill: white;
+}
+@media (max-width: 37.5em) {
+  .socials--logo {
+    position: relative;
+    top: 8rem;
+    fill: white;
+    height: 20rem;
+  }
 }
 .socials ul {
   display: flex;
@@ -1199,13 +1376,44 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
+.footer--nav {
+  grid-column: 3/4;
+}
+@media (max-width: 600px) {
+  .footer--nav nav {
+    margin-left: 0;
+    flex-direction: column;
+    display: block;
+    font-weight: 600;
+    font-size: 1.8rem;
+    grid-column: 1/-1;
+  }
+}
 .footer--nav ul {
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin-left: 10rem;
   font-size: 1.3rem;
   letter-spacing: 0.3rem;
+}
+@media (max-width: 900px) {
+  .footer--nav ul {
+    flex-direction: row;
+    right: 68%;
+    top: 4.5rem;
+    margin-left: 0;
+  }
+}
+@media (max-width: 600px) {
+  .footer--nav ul {
+    margin-left: 0;
+    flex-direction: column;
+    font-weight: 600;
+    font-size: 1.8rem;
+    width: 100%;
+    display: block;
+    grid-column: 1/2;
+  }
 }
 .footer--nav ul li {
   margin: 1rem 0;
@@ -1213,15 +1421,22 @@ input:checked + .slider:before {
   cursor: pointer;
   transition: color 0.3s ease-in-out;
 }
+@media (max-width: 56.25em) {
+  .footer--nav ul li {
+    margin-right: 1rem;
+  }
+}
 .footer--nav ul li:hover {
   color: rgba(255, 255, 255, 0.4);
 }
 
 .invite--rights {
+  grid-column: 3/-1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 12rem;
+  margin-left: auto;
 }
 
 .footer--invite {
@@ -1247,17 +1462,30 @@ input:checked + .slider:before {
   color: rgba(255, 255, 255, 0.65);
 }
 
+@media (max-width: 600px) {
+  .logo--links,
+.socials,
+.footer--nav,
+.invite--rights {
+    grid-column: 1/-1;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 .features__container {
   height: 50rem;
 }
 @media (max-width: 56.25em) {
   .features__container {
+    margin-top: 27rem;
     padding: 0;
     height: 90rem;
   }
 }
 @media (max-width: 37.5em) {
   .features__container {
+    margin-top: 11rem;
     padding: 0;
     height: 60rem;
   }

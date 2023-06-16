@@ -6,15 +6,19 @@
   background-color: #fff;
 
   @include respond(tab-port) {
-    display: none;
   }
 
   &__logo {
+    z-index: 15;
   }
 
   &__nav {
     display: flex;
     position: relative;
+
+    @include respond(tab-port) {
+      display: none;
+    }
 
     a,
     .nav__nav li .nav__link {
@@ -52,5 +56,124 @@
 
   &__btn {
     @include btn-styles(#000);
+
+    @include respond(tab-port) {
+      display: none;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+  @include respond(tab-port) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 15;
+    position: relative;
+
+    & span {
+      width: 2rem;
+      height: 0.25rem;
+      background: #333; /* Change this color to fit your design */
+      border-radius: 10px;
+      transition: all 0.3s linear;
+      position: relative;
+      transform-origin: 1px;
+    }
+    .hamburger.open span:nth-child(1) {
+      transform: rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+    .nav__nav {
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #fff; /* Change this color to fit your design */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: top 0.3s ease-in-out;
+    }
+
+    .nav__nav--open {
+      top: 0;
+    }
+
+    .nav__nav li {
+      list-style: none;
+      margin: 1rem 0;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #333; /* Change this color to fit your design */
+    }
+  }
+}
+
+.mobile {
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background: white;
+  color: block;
+  z-index: 10;
+  transition: transform 0.5s ease-in-out; /* You can adjust the duration and easing function to suit your needs. */
+
+  @include respond(tab-port) {
+    display: block;
+  }
+
+  &.active {
+    transform: translateY(0);
+  }
+
+  &.inactive {
+    transform: translateY(-100%);
+  }
+
+  nav {
+    height: 100%; /* Makes sure the nav takes the full height of .mobile */
+    display: flex;
+    justify-content: center; /* Horizontally centers nav items */
+    align-items: center; /* Vertically centers nav items */
+    text-align: center; /* Centers text within nav items */
+    font-size: 3rem;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    transform: translateY(25%);
+
+    & li {
+      padding-bottom: 2rem;
+    }
+  }
+
+  & .nav__link {
+    text-decoration: none;
+    color: black;
+  }
+
+  &__nav {
+    list-style: none;
+    padding: 0; /* Removes default padding from the list */
   }
 }
