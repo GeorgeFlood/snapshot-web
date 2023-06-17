@@ -250,16 +250,15 @@ body {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.3rem;
-  padding: 0 1rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 .second-container .header__info--invite p img {
-  padding-left: 0.5rem;
-  transition: all 0.3s ease-in-out;
+  padding-left: 1rem;
+  transition: padding 0.3s ease-in-out;
 }
 .second-container .header__info--invite p:hover img {
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 .second-container .header__info--arrow path {
   stroke: black;
@@ -1324,6 +1323,9 @@ input:checked + .slider:before {
     font-size: 2.5rem;
   }
 }
+.banner .footer--invite {
+  flex-basis: 18%;
+}
 
 .footer {
   display: flex;
@@ -1479,16 +1481,15 @@ input:checked + .slider:before {
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.3rem;
-  padding: 0 1rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 .footer--invite img {
-  padding-left: 0.5rem;
-  transition: all 0.3s ease-in-out;
+  padding-left: 1rem;
+  transition: padding 0.3s ease-in-out;
 }
 .footer--invite:hover img {
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .copyrights {
