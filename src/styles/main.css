@@ -1398,6 +1398,7 @@ input:checked + .slider:before {
 
 .footer--nav {
   margin-left: 5rem;
+  text-decoration: none;
 }
 @media (max-width: 37.5em) {
   .footer--nav {
@@ -1451,6 +1452,10 @@ input:checked + .slider:before {
 }
 .footer--nav ul li:hover {
   color: rgba(255, 255, 255, 0.4);
+}
+.footer--nav .nav__link {
+  text-decoration: none;
+  color: #fff;
 }
 
 .invite--rights {

@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import logo from "../../assets/shared/desktop/logo.svg";
 
 import facebook from "../../assets/shared/desktop/facebook.svg";
@@ -69,10 +70,26 @@ const Footer = () => {
         <div className="footer--nav">
           <nav>
             <ul>
-              <li>Home</li>
-              <li>Stories</li>
-              <li>Features</li>
-              <li>Pricing</li>
+              <li>
+                <Link to="/" className="nav__link">
+                  HOME
+                </Link>
+              </li>
+              <li>
+                <Link to="/features" className="nav__link">
+                  STORIES
+                </Link>
+              </li>
+              <li>
+                <Link to="/home" className="nav__link">
+                  FEATURES
+                </Link>
+              </li>
+              <li>
+                <Link to="/pricing" className="nav__link">
+                  PRICING
+                </Link>
+              </li>
             </ul>
           </nav>
         </div>
