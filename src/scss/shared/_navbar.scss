@@ -3,6 +3,7 @@
   justify-content: space-around;
   align-items: center;
   height: 7rem;
+
   background-color: #fff;
 
   @include respond(tab-port) {
@@ -87,44 +88,57 @@
       position: relative;
       transform-origin: 1px;
     }
-    .hamburger.open span:nth-child(1) {
-      transform: rotate(45deg);
-    }
+  }
 
-    .hamburger.open span:nth-child(2) {
-      opacity: 0;
-    }
+  &.open span:nth-child(1) {
+    transform: rotate(45deg);
+  }
 
-    .hamburger.open span:nth-child(3) {
-      transform: rotate(-45deg);
-    }
-    .nav__nav {
-      position: absolute;
-      top: -100%;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      background: #fff; /* Change this color to fit your design */
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: top 0.3s ease-in-out;
-    }
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
 
-    .nav__nav--open {
-      top: 0;
-    }
+  &.open span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
 
-    .nav__nav li {
-      list-style: none;
-      margin: 1rem 0;
-    }
+  .hamburger.open span:nth-child(1) {
+    transform: rotate(45deg);
+  }
 
-    .nav__link {
-      text-decoration: none;
-      color: #333; /* Change this color to fit your design */
-    }
+  .hamburger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+  .nav__nav {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff; /* Change this color to fit your design */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.3s ease-in-out;
+  }
+
+  .nav__nav--open {
+    top: 0;
+  }
+
+  .nav__nav li {
+    list-style: none;
+    margin: 1rem 0;
+  }
+
+  .nav__link {
+    text-decoration: none;
+    color: #333; /* Change this color to fit your design */
   }
 }
 
@@ -136,7 +150,8 @@
   background: white;
   color: block;
   z-index: 10;
-  transition: transform 0.5s ease-in-out; /* You can adjust the duration and easing function to suit your needs. */
+
+  transition: transform 0.5s ease-in-out, opacity 0.8s ease-in-out;
 
   @include respond(tab-port) {
     display: block;
@@ -144,14 +159,16 @@
 
   &.active {
     transform: translateY(0);
+    opacity: 1;
   }
 
   &.inactive {
+    opacity: 0;
     transform: translateY(-100%);
   }
 
   nav {
-    height: 100%; /* Makes sure the nav takes the full height of .mobile */
+    height: 100vh; /* Makes sure the nav takes the full height of .mobile */
     display: flex;
     justify-content: center; /* Horizontally centers nav items */
     align-items: center; /* Vertically centers nav items */
@@ -174,6 +191,21 @@
 
   &__nav {
     list-style: none;
-    padding: 0; /* Removes default padding from the list */
+    padding: 0;
+  }
+
+  &__btn {
+    color: #fff;
+    height: 6rem;
+    width: 55vw;
+    font-size: 2rem;
+    border: none;
+    font-weight: 800;
+    letter-spacing: 0.2rem;
+    background-color: #000;
+
+    @include respond(phone) {
+      width: 85vw;
+    }
   }
 }

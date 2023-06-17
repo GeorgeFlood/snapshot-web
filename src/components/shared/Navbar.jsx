@@ -41,7 +41,7 @@ const Navbar = () => {
         <button className="nav__btn">GET AN INVITE</button>
       </div>
 
-      <div className="hamburger" onClick={handleToggle}>
+      <div className={`hamburger${open ? " open" : ""}`} onClick={handleToggle}>
         <span></span>
         <span></span>
         <span></span>
@@ -65,6 +65,7 @@ const Navbar = () => {
                 PRICING
               </Link>
             </li>
+            <button className="mobile__btn">GET AN INVITE</button>
           </ul>
         </nav>
       </div>

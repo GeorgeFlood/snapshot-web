@@ -3,15 +3,11 @@
     height: 50rem;
 
     @include respond(tab-port) {
-      margin-top: 27rem;
-      padding: 0;
-      height: 90rem;
+      height: auto;
     }
 
     @include respond(phone) {
-      margin-top: 11rem;
-      padding: 0;
-      height: 60rem;
+      height: auto;
     }
   }
 

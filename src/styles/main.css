@@ -701,16 +701,12 @@ body {
 }
 @media (max-width: 56.25em) {
   .pricing__container {
-    margin-top: 27rem;
-    padding: 0;
-    height: 90rem;
+    height: auto;
   }
 }
 @media (max-width: 37.5em) {
   .pricing__container {
-    margin-top: 11rem;
-    padding: 0;
-    height: 60rem;
+    height: auto;
   }
 }
 .pricing .design-line {
@@ -1179,39 +1175,48 @@ input:checked + .slider:before {
     position: relative;
     transform-origin: 1px;
   }
-  .hamburger .hamburger.open span:nth-child(1) {
-    transform: rotate(45deg);
-  }
-  .hamburger .hamburger.open span:nth-child(2) {
-    opacity: 0;
-  }
-  .hamburger .hamburger.open span:nth-child(3) {
-    transform: rotate(-45deg);
-  }
-  .hamburger .nav__nav {
-    position: absolute;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #fff; /* Change this color to fit your design */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: top 0.3s ease-in-out;
-  }
-  .hamburger .nav__nav--open {
-    top: 0;
-  }
-  .hamburger .nav__nav li {
-    list-style: none;
-    margin: 1rem 0;
-  }
-  .hamburger .nav__link {
-    text-decoration: none;
-    color: #333; /* Change this color to fit your design */
-  }
+}
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.hamburger .hamburger.open span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.hamburger .hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger .hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.hamburger .nav__nav {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #fff; /* Change this color to fit your design */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: top 0.3s ease-in-out;
+}
+.hamburger .nav__nav--open {
+  top: 0;
+}
+.hamburger .nav__nav li {
+  list-style: none;
+  margin: 1rem 0;
+}
+.hamburger .nav__link {
+  text-decoration: none;
+  color: #333; /* Change this color to fit your design */
 }
 
 .mobile {
@@ -1222,7 +1227,7 @@ input:checked + .slider:before {
   background: white;
   color: block;
   z-index: 10;
-  transition: transform 0.5s ease-in-out; /* You can adjust the duration and easing function to suit your needs. */
+  transition: transform 0.5s ease-in-out, opacity 0.8s ease-in-out;
 }
 @media (max-width: 56.25em) {
   .mobile {
@@ -1231,12 +1236,14 @@ input:checked + .slider:before {
 }
 .mobile.active {
   transform: translateY(0);
+  opacity: 1;
 }
 .mobile.inactive {
+  opacity: 0;
   transform: translateY(-100%);
 }
 .mobile nav {
-  height: 100%; /* Makes sure the nav takes the full height of .mobile */
+  height: 100vh; /* Makes sure the nav takes the full height of .mobile */
   display: flex;
   justify-content: center; /* Horizontally centers nav items */
   align-items: center; /* Vertically centers nav items */
@@ -1256,7 +1263,22 @@ input:checked + .slider:before {
 }
 .mobile__nav {
   list-style: none;
-  padding: 0; /* Removes default padding from the list */
+  padding: 0;
+}
+.mobile__btn {
+  color: #fff;
+  height: 6rem;
+  width: 55vw;
+  font-size: 2rem;
+  border: none;
+  font-weight: 800;
+  letter-spacing: 0.2rem;
+  background-color: #000;
+}
+@media (max-width: 37.5em) {
+  .mobile__btn {
+    width: 85vw;
+  }
 }
 
 .banner {
@@ -1478,16 +1500,12 @@ User .footer {
 }
 @media (max-width: 56.25em) {
   .features__container {
-    margin-top: 27rem;
-    padding: 0;
-    height: 90rem;
+    height: auto;
   }
 }
 @media (max-width: 37.5em) {
   .features__container {
-    margin-top: 11rem;
-    padding: 0;
-    height: 60rem;
+    height: auto;
   }
 }
 .features .design-line {
