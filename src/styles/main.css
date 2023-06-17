@@ -1300,8 +1300,11 @@ input:checked + .slider:before {
 }
 @media (max-width: 37.5em) {
   .banner {
+    padding: 3rem;
     flex-direction: column;
-    height: 40rem;
+    align-items: flex-start;
+    justify-content: space-around;
+    height: 35rem;
     background-image: url(../assets//shared/mobile/bg-beta.jpg);
   }
 }
@@ -1309,17 +1312,16 @@ input:checked + .slider:before {
   width: 35%;
   font-size: 2.5rem;
 }
-@media (max-width: 37.5em) {
-  .banner--beta {
-    width: 100%;
-    padding: 0;
-    margin: 0rem 0;
-  }
-}
 @media (max-width: 56.25em) {
   .banner--beta {
     width: 40%;
     font-size: 1.7rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .banner--beta {
+    width: 100%;
+    font-size: 2.5rem;
   }
 }
 
