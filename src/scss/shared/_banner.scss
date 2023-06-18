@@ -39,6 +39,11 @@
   }
 
   & .footer--invite {
-    flex-basis: 18%;
+    padding-right: 1rem;
+
+    @include respond(phone) {
+      align-items: center;
+      padding-left: 0.8rem;
+    }
   }
 }

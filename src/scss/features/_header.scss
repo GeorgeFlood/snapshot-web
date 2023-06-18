@@ -1,13 +1,13 @@
 .features-header {
   display: flex;
-  background-image: url("../../../src/assets/stories/desktop/moon-of-appalacia.jpg");
+  background-image: url("../assets/stories/desktop/moon-of-appalacia.jpg");
   background-size: cover;
   height: 65rem;
   position: relative;
   transition: all ease-in-out 0.5s;
 
   @include respond(phone) {
-    background-image: url("../../../src/assets/stories/mobile/moon-of-appalacia.jpg");
+    background-image: url("../assets/stories/mobile/moon-of-appalacia.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 39.5rem;
@@ -62,8 +62,7 @@
   }
 
   &--story {
-    display: flex;
-    cursor: pointer;
+    @include invite-styles(#fff);
 
     & p {
       font-size: 1.3rem;

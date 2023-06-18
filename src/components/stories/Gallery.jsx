@@ -1,4 +1,3 @@
-import React from "react";
 import { Storycard } from "../shared/Storycard";
 import InfoComp from "./InfoComp";
 import mountains from "../../assets/stories/desktop/mountains.jpg";

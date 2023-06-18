@@ -130,6 +130,11 @@
   & .nav__link {
     text-decoration: none;
     color: #fff;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: rgba(#fff, 0.4);
+    }
   }
 }
 

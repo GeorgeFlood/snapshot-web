@@ -78,6 +78,7 @@
 
 @mixin invite-styles($color) {
   display: flex;
+  align-items: center;
   color: $color;
   font-size: 1.3rem;
   font-weight: 700;

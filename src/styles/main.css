@@ -246,6 +246,7 @@ body {
 }
 .second-container .header__info--invite p {
   display: flex;
+  align-items: center;
   color: #000;
   font-size: 1.3rem;
   font-weight: 700;
@@ -591,7 +592,7 @@ body {
 }
 .features-header {
   display: flex;
-  background-image: url("../../../src/assets/stories/desktop/moon-of-appalacia.jpg");
+  background-image: url("../assets/stories/desktop/moon-of-appalacia.jpg");
   background-size: cover;
   height: 65rem;
   position: relative;
@@ -599,7 +600,7 @@ body {
 }
 @media (max-width: 37.5em) {
   .features-header {
-    background-image: url("../../../src/assets/stories/mobile/moon-of-appalacia.jpg");
+    background-image: url("../assets/stories/mobile/moon-of-appalacia.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 39.5rem;
@@ -659,7 +660,20 @@ body {
 }
 .features-header--story {
   display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.features-header--story img {
+  padding-left: 1rem;
+  transition: padding 0.3s ease-in-out;
+}
+.features-header--story:hover img {
+  padding: 0 1.5rem;
 }
 .features-header--story p {
   font-size: 1.3rem;
@@ -1334,7 +1348,13 @@ input:checked + .slider:before {
   }
 }
 .banner .footer--invite {
-  flex-basis: 18%;
+  padding-right: 1rem;
+}
+@media (max-width: 37.5em) {
+  .banner .footer--invite {
+    align-items: center;
+    padding-left: 0.8rem;
+  }
 }
 
 .footer {
@@ -1468,6 +1488,10 @@ input:checked + .slider:before {
 .footer--nav .nav__link {
   text-decoration: none;
   color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+.footer--nav .nav__link:hover {
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .invite--rights {
@@ -1487,6 +1511,7 @@ input:checked + .slider:before {
 
 .footer--invite {
   display: flex;
+  align-items: center;
   color: #fff;
   font-size: 1.3rem;
   font-weight: 700;
