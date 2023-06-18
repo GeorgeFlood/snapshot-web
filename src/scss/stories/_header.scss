@@ -26,6 +26,10 @@
       margin-right: auto;
       transition: all 0.3s ease-in-out;
 
+      @include respond(tab-port) {
+        padding: 0 20rem;
+      }
+
       @include respond(phone) {
         padding: 0 5rem;
       }

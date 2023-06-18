@@ -156,6 +156,11 @@ body {
   margin-right: auto;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 56.25em) {
+  .header .header__info--invite {
+    padding: 0 20rem;
+  }
+}
 @media (max-width: 37.5em) {
   .header .header__info--invite {
     padding: 0 5rem;
