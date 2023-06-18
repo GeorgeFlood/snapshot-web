@@ -1,6 +1,3 @@
-import React from "react";
-import arrow from "../../assets/shared/desktop/arrow.svg";
-
 export const Header = () => {
   return (
     <div className="header">
