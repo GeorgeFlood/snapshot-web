@@ -7,6 +7,7 @@
   background-color: $color;
   text-align: left;
   flex-basis: 45%;
+  text-align: left;
 
   @include respond(phone) {
     padding: 10rem 0;
@@ -24,6 +25,10 @@
   font-size: 4rem;
   letter-spacing: 0.32rem;
 
+  @include respond(big-desk) {
+    font-size: 4.3rem;
+  }
+
   @include respond(tab-port) {
     margin: 0 25rem;
   }
@@ -39,6 +44,10 @@
   margin: 2rem 10rem;
   font-size: 2rem;
 
+  @include respond(big-desk) {
+    font-size: 2.3rem;
+  }
+
   @include respond(tab-port) {
     margin: 4rem 20rem;
   }
@@ -51,14 +60,18 @@
   background-image: $url;
   flex-basis: 55%;
   background-repeat: no-repeat;
-  background-size: cover; // Ensure the image always covers the entire div
-  background-position: center; // Center the image
-  position: relative; // Add this line
+  background-size: cover;
+  background-position: center;
+  position: relative;
 
   &:before {
     content: "";
     display: block;
     padding-top: 80%;
+
+    @include respond(big-desk) {
+      padding-top: 70%;
+    }
   }
 
   &:after {

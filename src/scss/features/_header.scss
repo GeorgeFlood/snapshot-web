@@ -6,6 +6,14 @@
   position: relative;
   transition: all ease-in-out 0.5s;
 
+  @include respond(big-desk) {
+    height: 75rem;
+  }
+
+  @include respond(tab-port) {
+    background-image: url("../assets/stories/tablet/moon-of-appalacia.jpg");
+  }
+
   @include respond(phone) {
     background-image: url("../assets/stories/mobile/moon-of-appalacia.jpg");
     background-size: cover;
@@ -13,9 +21,6 @@
     height: 39.5rem;
   }
 
-  @include respond(tab-port) {
-    background-image: url("../../../src/assets/stories/tablet/moon-of-appalacia.jpg");
-  }
   &--text {
     display: flex;
     flex-direction: column;

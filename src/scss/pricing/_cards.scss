@@ -109,6 +109,11 @@ input:checked + .slider:before {
     margin: 0rem 2rem;
     color: rgba(#000, 0.65);
 
+    @include respond(big-desk) {
+      font-size: 1.65rem;
+      margin: 0 4rem;
+    }
+
     @include respond(phone) {
       font-size: 2rem;
     }
@@ -132,6 +137,10 @@ input:checked + .slider:before {
   &__basic {
     height: 40rem;
 
+    @include respond(big-desk) {
+      height: 50rem;
+    }
+
     & button {
       background-color: #000;
       color: #fff;
@@ -145,6 +154,9 @@ input:checked + .slider:before {
     height: 45rem;
     border-top: solid 55px linear-gradient(135deg, #ffc593, #bc7198, #5a77ff);
     bottom: 0.3rem;
+    @include respond(big-desk) {
+      height: 55rem;
+    }
 
     &::after {
       content: "";

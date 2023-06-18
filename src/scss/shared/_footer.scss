@@ -72,6 +72,10 @@
 .footer--nav {
   margin-left: 5rem;
   text-decoration: none;
+
+  @include respond(big-desk) {
+    margin-left: 9rem;
+  }
   @include respond(phone) {
     margin: 0;
     padding: 0;
