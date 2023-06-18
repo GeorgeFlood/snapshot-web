@@ -1265,14 +1265,24 @@ input:checked + .slider:before {
   padding: 0;
 }
 .mobile__btn {
-  color: #fff;
-  height: 6rem;
-  width: 55vw;
-  font-size: 2rem;
-  border: none;
-  font-weight: 800;
-  letter-spacing: 0.2rem;
+  padding: 1.25rem 2.5rem;
+  position: relative;
   background-color: #000;
+  top: 0;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-weight: 400;
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+  width: 40vh;
+}
+.mobile__btn:hover {
+  background-color: rgba(0, 0, 0, 0.75);
+  top: -2px;
+}
+.mobile__btn:active {
+  top: 1px;
 }
 @media (max-width: 37.5em) {
   .mobile__btn {
