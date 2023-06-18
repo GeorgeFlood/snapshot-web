@@ -17,9 +17,11 @@
 
   & .design-line {
     height: 28%;
+    top: 35%;
 
     @include respond(tab-port) {
       height: 2%;
+      top: 0;
     }
 
     @include respond(phone) {

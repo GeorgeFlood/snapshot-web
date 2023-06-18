@@ -158,6 +158,9 @@
 
 .footer--invite {
   @include invite-styles(#fff);
+  @include respond(phone) {
+    margin: 0 auto;
+  }
 }
 
 .copyrights {

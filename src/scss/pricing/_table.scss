@@ -31,12 +31,9 @@
   .pricing-table,
   .pricing-table th,
   .pricing-table td {
-    position: relative;
-    display: block;
-    left: 60%;
-    transform: translateX(-50%);
+    width: 100%;
   }
   .pricing-table {
-    margin: 10rem 0;
+    margin: 10rem auto;
   }
 }

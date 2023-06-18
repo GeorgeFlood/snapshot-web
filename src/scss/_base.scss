@@ -20,6 +20,7 @@ html {
 
   @include respond(big-desk) {
     font-size: 75%;
+    margin: 4rem;
   }
 }
 

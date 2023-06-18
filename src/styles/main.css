@@ -68,6 +68,7 @@ html {
 @media (min-width: 112.5em) {
   html {
     font-size: 75%;
+    margin: 4rem;
   }
 }
 
@@ -788,10 +789,12 @@ body {
 }
 .pricing .design-line {
   height: 28%;
+  top: 35%;
 }
 @media (max-width: 56.25em) {
   .pricing .design-line {
     height: 2%;
+    top: 0;
   }
 }
 @media (max-width: 37.5em) {
@@ -988,6 +991,11 @@ input:checked + .slider:before {
   text-align: center;
   margin: 5rem 10rem 10rem 10rem;
 }
+@media (min-width: 112.5em) {
+  .pricing-cards {
+    justify-content: center;
+  }
+}
 @media (max-width: 56.25em) {
   .pricing-cards {
     margin: 5rem 0.5rem 10rem 0.5rem;
@@ -996,7 +1004,7 @@ input:checked + .slider:before {
 @media (max-width: 37.5em) {
   .pricing-cards {
     flex-direction: column;
-    margin: 4rem 2rem;
+    margin: 7rem 2rem;
   }
 }
 
@@ -1076,6 +1084,7 @@ input:checked + .slider:before {
 @media (min-width: 112.5em) {
   .pricing-card__basic {
     height: 50rem;
+    width: 40rem;
   }
 }
 .pricing-card__basic button {
@@ -1093,6 +1102,12 @@ input:checked + .slider:before {
 @media (min-width: 112.5em) {
   .pricing-card__pro {
     height: 55rem;
+    width: 45rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .pricing-card__pro {
+    margin: 5rem 0;
   }
 }
 .pricing-card__pro::after {
@@ -1122,7 +1137,7 @@ input:checked + .slider:before {
           animation: gradient 3s linear infinite;
 }
 .pricing-card__pro p {
-  color: rgba(255, 255, 255, 0.75);
+  color: white;
 }
 .pricing-card__pro button {
   padding: 1.25rem 2.5rem;
@@ -1176,13 +1191,10 @@ input:checked + .slider:before {
   .pricing-table,
 .pricing-table th,
 .pricing-table td {
-    position: relative;
-    display: block;
-    left: 60%;
-    transform: translateX(-50%);
+    width: 100%;
   }
   .pricing-table {
-    margin: 10rem 0;
+    margin: 10rem auto;
   }
 }
 .nav {
@@ -1630,6 +1642,11 @@ input:checked + .slider:before {
 .footer--invite:hover img {
   padding: 0 1.5rem;
 }
+@media (max-width: 37.5em) {
+  .footer--invite {
+    margin: 0 auto;
+  }
+}
 
 .copyrights {
   font-size: 1.4rem;
@@ -1656,10 +1673,12 @@ input:checked + .slider:before {
 }
 .features .design-line {
   height: 28%;
+  top: 35%;
 }
 @media (max-width: 56.25em) {
   .features .design-line {
     height: 2%;
+    top: 0;
   }
 }
 @media (max-width: 37.5em) {

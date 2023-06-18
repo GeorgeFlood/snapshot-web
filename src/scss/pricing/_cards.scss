@@ -73,12 +73,16 @@ input:checked + .slider:before {
   text-align: center;
   margin: 5rem 10rem 10rem 10rem;
 
+  @include respond(big-desk) {
+    justify-content: center;
+  }
+
   @include respond(tab-port) {
     margin: 5rem 0.5rem 10rem 0.5rem;
   }
   @include respond(phone) {
     flex-direction: column;
-    margin: 4rem 2rem;
+    margin: 7rem 2rem;
   }
 }
 
@@ -139,6 +143,7 @@ input:checked + .slider:before {
 
     @include respond(big-desk) {
       height: 50rem;
+      width: 40rem;
     }
 
     & button {
@@ -156,6 +161,11 @@ input:checked + .slider:before {
     bottom: 0.3rem;
     @include respond(big-desk) {
       height: 55rem;
+      width: 45rem;
+    }
+
+    @include respond(phone) {
+      margin: 5rem 0;
     }
 
     &::after {
@@ -185,7 +195,7 @@ input:checked + .slider:before {
     }
 
     & p {
-      color: rgba(#fff, 0.75);
+      color: rgba(#fff, 1);
     }
 
     & button {
