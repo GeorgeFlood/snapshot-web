@@ -90,11 +90,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: #000;
-  text-align: left;
+  padding: 0 10rem;
   flex-basis: 45%;
-  text-align: left;
 }
 @media (max-width: 37.5em) {
   .header .header__info {
@@ -109,7 +108,6 @@ body {
 }
 .header .header__info--title {
   color: #fff;
-  margin: 0 10rem;
   font-size: 4rem;
   letter-spacing: 0.32rem;
 }
@@ -131,7 +129,7 @@ body {
 .header .header__info--para {
   color: rgba(255, 255, 255, 0.6);
   text-align: left;
-  margin: 2rem 10rem;
+  margin: 2rem 0;
   font-size: 2rem;
 }
 @media (min-width: 112.5em) {
@@ -151,10 +149,36 @@ body {
 }
 .header .header__info--invite {
   display: flex;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
   cursor: pointer;
-  padding: 0 10rem;
-  margin-right: auto;
   transition: all 0.3s ease-in-out;
+  align-self: flex-start;
+}
+.header .header__info--invite p {
+  position: relative;
+}
+.header .header__info--invite p::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+.header .header__info--invite img, .header .header__info--invite svg {
+  padding-left: 1rem;
+  transition: padding 0.3s ease-in-out;
+}
+.header .header__info--invite:hover img, .header .header__info--invite:hover svg {
+  padding: 0 1.5rem;
+}
+.header .header__info--invite:hover p::after {
+  width: 100%;
 }
 @media (max-width: 56.25em) {
   .header .header__info--invite {
@@ -194,7 +218,7 @@ body {
 }
 @media (min-width: 112.5em) {
   .header__img:before {
-    padding-top: 70%;
+    padding-top: 65%;
   }
 }
 .header__img:after {
@@ -220,11 +244,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: #fff;
-  text-align: left;
+  padding: 0 10rem;
   flex-basis: 45%;
-  text-align: left;
 }
 @media (max-width: 37.5em) {
   .second-container .header__info {
@@ -239,7 +262,6 @@ body {
 }
 .second-container .header__info--title {
   color: #000;
-  margin: 0 10rem;
   font-size: 4rem;
   letter-spacing: 0.32rem;
 }
@@ -261,7 +283,7 @@ body {
 .second-container .header__info--para {
   color: rgba(0, 0, 0, 0.6);
   text-align: left;
-  margin: 2rem 10rem;
+  margin: 2rem 0;
   font-size: 2rem;
 }
 @media (min-width: 112.5em) {
@@ -281,23 +303,42 @@ body {
 }
 .second-container .header__info--invite {
   display: flex;
-}
-.second-container .header__info--invite p {
-  display: flex;
-  align-items: center;
   color: #000;
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 0.3rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  align-self: flex-start;
 }
-.second-container .header__info--invite p img {
+.second-container .header__info--invite p {
+  position: relative;
+}
+.second-container .header__info--invite p::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
+.second-container .header__info--invite img, .second-container .header__info--invite svg {
   padding-left: 1rem;
   transition: padding 0.3s ease-in-out;
 }
-.second-container .header__info--invite p:hover img {
+.second-container .header__info--invite:hover img, .second-container .header__info--invite:hover svg {
   padding: 0 1.5rem;
+}
+.second-container .header__info--invite:hover p::after {
+  width: 100%;
+}
+.second-container .header__info--invite p {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-size: 1.3rem;
+  letter-spacing: 0.3rem;
 }
 .second-container .header__info--arrow path {
   stroke: black;
@@ -318,7 +359,7 @@ body {
 }
 @media (min-width: 112.5em) {
   .second-container .header__img:before {
-    padding-top: 70%;
+    padding-top: 65%;
   }
 }
 .second-container .header__img:after {
@@ -349,12 +390,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: rgb(255, 255, 255);
-  text-align: left;
+  padding: 0 10rem;
   flex-basis: 45%;
-  text-align: left;
-  margin: 0 5%;
 }
 @media (max-width: 37.5em) {
   .third-container .header__info {
@@ -369,7 +408,6 @@ body {
 }
 .third-container .header__info--title {
   color: rgb(0, 0, 0);
-  margin: 0 10rem;
   font-size: 4rem;
   letter-spacing: 0.32rem;
 }
@@ -391,7 +429,7 @@ body {
 .third-container .header__info--para {
   color: rgba(0, 0, 0, 0.6);
   text-align: left;
-  margin: 2rem 10rem;
+  margin: 2rem 0;
   font-size: 2rem;
 }
 @media (min-width: 112.5em) {
@@ -411,18 +449,43 @@ body {
 }
 .third-container .header__info--invite {
   display: flex;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  align-self: flex-start;
+  transition: all 0.3s ease-in-out;
+}
+.third-container .header__info--invite p {
+  position: relative;
+}
+.third-container .header__info--invite p::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
+.third-container .header__info--invite img, .third-container .header__info--invite svg {
+  padding-left: 1rem;
+  transition: padding 0.3s ease-in-out;
+}
+.third-container .header__info--invite:hover img, .third-container .header__info--invite:hover svg {
+  padding: 0 1.5rem;
+}
+.third-container .header__info--invite:hover p::after {
+  width: 100%;
 }
 .third-container .header__info--invite p {
   color: rgb(0, 0, 0);
   font-weight: 700;
   font-size: 1.3rem;
   letter-spacing: 0.3rem;
-  padding: 0 1rem;
-  cursor: pointer;
-  transition: padding 0.3s ease-in-out;
-}
-.third-container .header__info--invite p:hover {
-  padding: 0 2rem;
 }
 .third-container .header__info--arrow path {
   stroke: black;
@@ -443,7 +506,7 @@ body {
 }
 @media (min-width: 112.5em) {
   .third-container .header__img:before {
-    padding-top: 70%;
+    padding-top: 65%;
   }
 }
 .third-container .header__img:after {
@@ -725,7 +788,6 @@ body {
 }
 .features-header--story {
   display: flex;
-  align-items: center;
   color: #fff;
   font-size: 1.3rem;
   font-weight: 700;
@@ -733,12 +795,28 @@ body {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.features-header--story img {
+.features-header--story p {
+  position: relative;
+}
+.features-header--story p::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+.features-header--story img, .features-header--story svg {
   padding-left: 1rem;
   transition: padding 0.3s ease-in-out;
 }
-.features-header--story:hover img {
+.features-header--story:hover img, .features-header--story:hover svg {
   padding: 0 1.5rem;
+}
+.features-header--story:hover p::after {
+  width: 100%;
 }
 .features-header--story p {
   font-size: 1.3rem;
@@ -822,7 +900,7 @@ body {
 }
 @media (min-width: 112.5em) {
   .pricing .header__img:before {
-    padding-top: 70%;
+    padding-top: 65%;
   }
 }
 .pricing .header__img:after {
@@ -855,7 +933,7 @@ body {
 }
 @media (max-width: 56.25em) and (min-width: 112.5em) {
   .pricing .header__img:before {
-    padding-top: 70%;
+    padding-top: 65%;
   }
 }
 @media (max-width: 56.25em) {
@@ -890,7 +968,7 @@ body {
 }
 @media (max-width: 37.5em) and (min-width: 112.5em) {
   .pricing .header__img:before {
-    padding-top: 70%;
+    padding-top: 65%;
   }
 }
 @media (max-width: 37.5em) {
@@ -1464,7 +1542,7 @@ input:checked + .slider:before {
   }
 }
 .banner .footer--invite {
-  padding-right: 1rem;
+  flex-basis: 17%;
 }
 @media (max-width: 37.5em) {
   .banner .footer--invite {
@@ -1545,12 +1623,12 @@ input:checked + .slider:before {
 }
 
 .footer--nav {
-  margin-left: 5rem;
+  margin-left: 7rem;
   text-decoration: none;
 }
 @media (min-width: 112.5em) {
   .footer--nav {
-    margin-left: 9rem;
+    margin-left: 10rem;
   }
 }
 @media (max-width: 37.5em) {
@@ -1619,8 +1697,8 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 12rem;
   margin-left: auto;
+  height: 14rem;
 }
 @media (max-width: 37.5em) {
   .invite--rights {
@@ -1632,7 +1710,6 @@ input:checked + .slider:before {
 
 .footer--invite {
   display: flex;
-  align-items: center;
   color: #fff;
   font-size: 1.3rem;
   font-weight: 700;
@@ -1640,12 +1717,28 @@ input:checked + .slider:before {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.footer--invite img {
+.footer--invite p {
+  position: relative;
+}
+.footer--invite p::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+.footer--invite img, .footer--invite svg {
   padding-left: 1rem;
   transition: padding 0.3s ease-in-out;
 }
-.footer--invite:hover img {
+.footer--invite:hover img, .footer--invite:hover svg {
   padding: 0 1.5rem;
+}
+.footer--invite:hover p::after {
+  width: 100%;
 }
 @media (max-width: 37.5em) {
   .footer--invite {
@@ -1706,7 +1799,7 @@ input:checked + .slider:before {
 }
 @media (min-width: 112.5em) {
   .features .header__img:before {
-    padding-top: 70%;
+    padding-top: 65%;
   }
 }
 .features .header__img:after {
@@ -1739,7 +1832,7 @@ input:checked + .slider:before {
 }
 @media (max-width: 56.25em) and (min-width: 112.5em) {
   .features .header__img:before {
-    padding-top: 70%;
+    padding-top: 65%;
   }
 }
 @media (max-width: 56.25em) {
@@ -1774,7 +1867,7 @@ input:checked + .slider:before {
 }
 @media (max-width: 37.5em) and (min-width: 112.5em) {
   .features .header__img:before {
-    padding-top: 70%;
+    padding-top: 65%;
   }
 }
 @media (max-width: 37.5em) {

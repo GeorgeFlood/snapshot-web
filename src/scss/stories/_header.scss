@@ -20,12 +20,8 @@
     }
 
     &--invite {
-      display: flex;
-      cursor: pointer;
-      padding: 0 10rem;
-      margin-right: auto;
-      transition: all 0.3s ease-in-out;
-
+      @include invite-styles(#fff);
+      align-self: flex-start;
       @include respond(tab-port) {
         padding: 0 20rem;
       }
@@ -73,10 +69,14 @@
     }
 
     &--invite {
-      display: flex;
+      @include invite-styles(#000);
+      align-self: flex-start;
 
       p {
-        @include invite-styles(#000);
+        color: rgb(0, 0, 0);
+        font-weight: 700;
+        font-size: 1.3rem;
+        letter-spacing: 0.3rem;
       }
     }
     &--arrow path {
@@ -102,7 +102,6 @@
 
   .header__info {
     @include headerContainerInfo(rgb(255, 255, 255));
-    margin: 0 5%;
 
     &--title {
       @include headerContainerTitle(rgb(0, 0, 0));
@@ -111,21 +110,17 @@
     &--para {
       @include headerContainerPara(rgba(0, 0, 0, 0.75));
     }
+
     &--invite {
-      display: flex;
+      @include invite-styles(#000);
+      align-self: flex-start;
+      transition: all 0.3s ease-in-out;
 
       p {
         color: rgb(0, 0, 0);
         font-weight: 700;
         font-size: 1.3rem;
         letter-spacing: 0.3rem;
-        padding: 0 1rem;
-        cursor: pointer;
-        transition: padding 0.3s ease-in-out;
-
-        &:hover {
-          padding: 0 2rem;
-        }
       }
     }
     &--arrow path {

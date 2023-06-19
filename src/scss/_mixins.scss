@@ -3,11 +3,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   background-color: $color;
-  text-align: left;
+  padding: 0 10rem;
   flex-basis: 45%;
-  text-align: left;
 
   @include respond(phone) {
     padding: 10rem 0;
@@ -21,7 +20,6 @@
 
 @mixin headerContainerTitle($color) {
   color: $color;
-  margin: 0 10rem;
   font-size: 4rem;
   letter-spacing: 0.32rem;
 
@@ -41,7 +39,7 @@
 @mixin headerContainerPara($color) {
   color: rgba($color, 0.6);
   text-align: left;
-  margin: 2rem 10rem;
+  margin: 2rem 0;
   font-size: 2rem;
 
   @include respond(big-desk) {
@@ -70,7 +68,7 @@
     padding-top: 80%;
 
     @include respond(big-desk) {
-      padding-top: 70%;
+      padding-top: 65%;
     }
   }
 
@@ -91,7 +89,6 @@
 
 @mixin invite-styles($color) {
   display: flex;
-  align-items: center;
   color: $color;
   font-size: 1.3rem;
   font-weight: 700;
@@ -100,13 +97,34 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
-  & img {
+  p {
+    position: relative;
+  }
+
+  p::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: $color;
+    transition: width 0.3s;
+  }
+
+  & img,
+  & svg {
     padding-left: 1rem;
     transition: padding 0.3s ease-in-out;
   }
 
-  &:hover img {
+  &:hover img,
+  &:hover svg {
     padding: 0 1.5rem;
+  }
+
+  &:hover p::after {
+    width: 100%;
   }
 }
 

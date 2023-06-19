@@ -39,7 +39,7 @@
   }
 
   & .footer--invite {
-    padding-right: 1rem;
+    flex-basis: 17%;
 
     @include respond(phone) {
       align-items: center;
